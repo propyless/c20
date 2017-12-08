@@ -16,6 +16,7 @@ Format String Options
 ---------------------
 ```
 value_per_token - Token NAV value
+curr_token_value - Total value for all your tokens in your currency
 num_tokens - Number of tokens you have specified in config
 currency - The currency you have chosen
 total_investment - The amount of money you invested
