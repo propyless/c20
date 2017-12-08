@@ -4,7 +4,7 @@ from pyyamlconfig import load_config
 from pathlib import Path
 
 # default message
-default_msg = 'C20: Value: {curr_token_value} {currency} - Inc: {increase_num} {currency} ({percent_prefix}{increase_percent}%)'
+default_msg = 'C20: Value: {curr_token_value} {currency} - Inc: {increase_num} {currency} ({increase_percent})'
 
 # Get tokens
 home = str(Path.home())
@@ -42,6 +42,7 @@ if total_investment:
 
   if increase_percent > 0:
     percent_prefix = '+'
+  
 
 # Prepare data dict
 data = {
@@ -52,8 +53,7 @@ data = {
   "total_investment": total_investment,
   "exchange_rate": exchange_rate,
   "increase_num": increase_num,
-  "increase_percent": increase_percent,
-  "percent_prefix": percent_prefix
+  "increase_percent": f'{percent_prefix}{increase_percent}%'
 }
 
 print(status_fmt.format(**data))

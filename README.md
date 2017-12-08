@@ -23,7 +23,6 @@ total_investment - The amount of money you invested
 exchange_rate - The current exchange rate to your currency from USD
 increase_num - The value increase from your investment cost to the current value_per_token * num_tokens
 increase_percent - The percentage increase to your investment
-precent_prefix - Adds a + or a minus infront of the increase_percent (eg. +23.33%, -34.44%)
 ```
 
 Format String Examples
